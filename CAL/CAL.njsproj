@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>CAL</Name>
+    <RootNamespace>CAL</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>fa8ca0ed-6e74-4dd0-b4d8-1d18e0dd4257</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="server.js" />
+    <Compile Include="webpack.config.js" />
+    <Compile Include="webpack.prod.config.js" />
+    <Content Include=".editorconfig" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\app.html" />
+    <Content Include="src\app\charts\charts.html" />
+    <Content Include="src\app\charts\charts.scss" />
+    <Content Include="src\app\core\chat-sidebar\chat-message\chat-message.html" />
+    <Content Include="src\app\core\chat-sidebar\chat-sidebar.html" />
+    <Content Include="src\app\core\core.html" />
+    <Content Include="src\app\core\navbar\navbar.html" />
+    <Content Include="src\app\core\notifications\notifications.html" />
+    <Content Include="src\app\core\sidebar\sidebar.html" />
+    <Content Include="src\app\dashboard\dashboard.html" />
+    <Content Include="src\app\dashboard\dashboard.scss" />
+    <Content Include="src\app\error\error.html" />
+    <Content Include="src\app\error\error.scss" />
+    <Content Include="src\app\extra-calendar\extra-calendar.html" />
+    <Content Include="src\app\extra-calendar\extra-calendar.scss" />
+    <Content Include="src\app\extra-gallery\extra-gallery.html" />
+    <Content Include="src\app\extra-gallery\extra-gallery.scss" />
+    <Content Include="src\app\extra-invoice\extra-invoice.html" />
+    <Content Include="src\app\extra-invoice\extra-invoice.scss" />
+    <Content Include="src\app\extra-search-results\extra-search-results.html" />
+    <Content Include="src\app\extra-search-results\extra-search-results.scss" />
+    <Content Include="src\app\extra-time-line\extra-time-line.html" />
+    <Content Include="src\app\extra-time-line\extra-time-line.scss" />
+    <Content Include="src\app\forms-elements\forms-elements.html" />
+    <Content Include="src\app\forms-elements\forms-elements.scss" />
+    <Content Include="src\app\forms-validation\forms-validation.html" />
+    <Content Include="src\app\forms-validation\forms-validation.scss" />
+    <Content Include="src\app\forms-wizard\forms-wizard.html" />
+    <Content Include="src\app\forms-wizard\forms-wizard.scss" />
+    <Content Include="src\app\grid\grid.html" />
+    <Content Include="src\app\grid\grid.scss" />
+    <Content Include="src\app\inbox\inbox.html" />
+    <Content Include="src\app\inbox\inbox.scss" />
+    <Content Include="src\app\inbox\mail-detail\mail-detail.html" />
+    <Content Include="src\app\inbox\mail-detail\mail-detail.scss" />
+    <Content Include="src\app\inbox\mail-form\mail-form.html" />
+    <Content Include="src\app\inbox\mail-list\mail-list.html" />
+    <Content Include="src\app\inbox\mail-list\mail-list.scss" />
+    <Content Include="src\app\login\login.html" />
+    <Content Include="src\app\login\login.scss" />
+    <Content Include="src\app\maps-google\maps-google.html" />
+    <Content Include="src\app\maps-vector\maps-vector.html" />
+    <Content Include="src\app\profile\profile.html" />
+    <Content Include="src\app\profile\profile.scss" />
+    <Content Include="src\app\tables-basic\tables-basic.html" />
+    <Content Include="src\app\tables-dynamic\tables-dynamic.html" />
+    <Content Include="src\app\tables-dynamic\tables-dynamic.scss" />
+    <Content Include="src\app\ui-buttons\ui-buttons.html" />
+    <Content Include="src\app\ui-components\modal-component\modal-component.html" />
+    <Content Include="src\app\ui-components\ui-components.html" />
+    <Content Include="src\app\ui-icons\ui-icons.html" />
+    <Content Include="src\app\ui-icons\ui-icons.scss" />
+    <Content Include="src\app\ui-list-groups\ui-list-groups.html" />
+    <Content Include="src\app\ui-list-groups\ui-list-groups.scss" />
+    <Content Include="src\app\ui-notifications\ui-notifications.html" />
+    <Content Include="src\app\ui-notifications\ui-notifications.scss" />
+    <Content Include="src\app\ui-tabs-accordion\ui-tabs-accordion.html" />
+    <Content Include="src\app\widgets\changes-chart-widget\changes-chart-widget.html" />
+    <Content Include="src\app\widgets\flot-chart-widget\flot-chart-widget.html" />
+    <Content Include="src\app\widgets\realtime-traffic-widget\realtime-traffic-widget.html" />
+    <Content Include="src\app\widgets\widgets.html" />
+    <Content Include="src\app\widgets\widgets.scss" />
+    <Content Include="src\app\widgets\years-map-widget\years-map-widget.html" />
+    <Content Include="src\assets\bootstrap-application-wizard\folder.png" />
+    <Content Include="src\assets\bootstrap-application-wizard\groups.png" />
+    <Content Include="src\assets\bootstrap-application-wizard\server_new.png" />
+    <Content Include="src\assets\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="src\assets\bootstrap-colorpicker\alpha.png" />
+    <Content Include="src\assets\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="src\assets\bootstrap-colorpicker\hue.png" />
+    <Content Include="src\assets\bootstrap-colorpicker\saturation.png" />
+    <Content Include="src\assets\demo\grid\autoload.php" />
+    <Content Include="src\assets\demo\grid\default.php" />
+    <Content Include="src\assets\demo\grid\news.php" />
+    <Content Include="src\assets\demo\grid\shares.php" />
+    <Content Include="src\assets\demo\notifications\messages.html" />
+    <Content Include="src\assets\demo\notifications\notifications.html" />
+    <Content Include="src\assets\demo\notifications\notifications.php" />
+    <Content Include="src\assets\demo\notifications\progress.html" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.eot" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.svg" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.ttf" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.woff" />
+    <Content Include="src\assets\fonts\font-awesome\fontawesome-webfont.woff2" />
+    <Content Include="src\assets\fonts\font-awesome\FontAwesome.otf" />
+    <Content Include="src\assets\fonts\glyphicons\glyphicons-halflings-regular.eot" />
+    <Content Include="src\assets\fonts\glyphicons\glyphicons-halflings-regular.svg" />
+    <Content Include="src\assets\fonts\glyphicons\glyphicons-halflings-regular.ttf" />
+    <Content Include="src\assets\fonts\glyphicons\glyphicons-halflings-regular.woff" />
+    <Content Include="src\assets\fonts\glyphicons\glyphicons-halflings-regular.woff2" />
+    <Content Include="src\assets\fonts\google\open-sans-bold-italic.woff" />
+    <Content Include="src\assets\fonts\google\open-sans-bold.woff" />
+    <Content Include="src\assets\fonts\google\open-sans-italic.woff" />
+    <Content Include="src\assets\fonts\google\open-sans-light-italic.woff" />
+    <Content Include="src\assets\fonts\google\open-sans-light.woff" />
+    <Content Include="src\assets\fonts\google\open-sans-semibold-italic.woff" />
+    <Content Include="src\assets\fonts\google\open-sans-semibold.woff" />
+    <Content Include="src\assets\fonts\google\open-sans.woff" />
+    <Content Include="src\assets\images\a2.png" />
+    <Content Include="src\assets\images\avatar.png" />
+    <Content Include="src\assets\images\logo\invoice-logo.png" />
+    <Content Include="src\assets\images\people\a1.jpg" />
+    <Content Include="src\assets\images\people\a2.jpg" />
+    <Content Include="src\assets\images\people\a3.jpg" />
+    <Content Include="src\assets\images\people\a4.jpg" />
+    <Content Include="src\assets\images\people\a5.jpg" />
+    <Content Include="src\assets\images\people\a6.jpg" />
+    <Content Include="src\assets\images\pictures\1.jpg" />
+    <Content Include="src\assets\images\pictures\10.jpg" />
+    <Content Include="src\assets\images\pictures\11.jpg" />
+    <Content Include="src\assets\images\pictures\13.jpg" />
+    <Content Include="src\assets\images\pictures\14.jpg" />
+    <Content Include="src\assets\images\pictures\15.jpg" />
+    <Content Include="src\assets\images\pictures\16.jpg" />
+    <Content Include="src\assets\images\pictures\17.jpg" />
+    <Content Include="src\assets\images\pictures\18.jpg" />
+    <Content Include="src\assets\images\pictures\19.jpg" />
+    <Content Include="src\assets\images\pictures\2.jpg" />
+    <Content Include="src\assets\images\pictures\20.jpg" />
+    <Content Include="src\assets\images\pictures\21.jpg" />
+    <Content Include="src\assets\images\pictures\3.jpg" />
+    <Content Include="src\assets\images\pictures\4.jpg" />
+    <Content Include="src\assets\images\pictures\5.jpg" />
+    <Content Include="src\assets\images\pictures\6.jpg" />
+    <Content Include="src\assets\images\pictures\8.jpg" />
+    <Content Include="src\assets\images\pictures\9.jpg" />
+    <Content Include="src\assets\images\search.png" />
+    <Content Include="src\assets\images\sing-preview.png" />
+    <Content Include="src\assets\images\sing-screenshot.png" />
+    <Content Include="src\assets\json\emails.json" />
+    <Content Include="src\assets\json\folders.json" />
+    <Content Include="src\assets\json\pageable-territories.json" />
+    <Content Include="src\assets\json\people.json" />
+    <Content Include="src\assets\select2\select2-spinner.gif" />
+    <Content Include="src\assets\select2\select2.png" />
+    <Content Include="src\index.html" />
+    <Content Include="src\scss\application.scss" />
+    <Content Include="src\scss\_base.scss" />
+    <Content Include="src\scss\_bootstrap-override.scss" />
+    <Content Include="src\scss\_custom-libs-override.scss" />
+    <Content Include="src\scss\_font.scss" />
+    <Content Include="src\scss\_general.scss" />
+    <Content Include="src\scss\_global-transitions.scss" />
+    <Content Include="src\scss\_libs-override.scss" />
+    <Content Include="src\scss\_mixins.scss" />
+    <Content Include="src\scss\_print.scss" />
+    <Content Include="src\scss\_utils.scss" />
+    <Content Include="src\scss\_variables.scss" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+    <Content Include="typedoc.json" />
+    <Content Include="typings.json" />
+    <Content Include="typings\globals\es6-shim\typings.json" />
+    <Content Include="typings\globals\hammerjs\typings.json" />
+    <Content Include="typings\globals\jquery\typings.json" />
+    <Content Include="typings\globals\ng2\typings.json" />
+    <Content Include="typings\globals\node\typings.json" />
+    <Content Include="typings\globals\selenium-webdriver\typings.json" />
+    <Content Include="typings\globals\webpack\typings.json" />
+    <Content Include="typings\globals\zone.js\typings.json" />
+    <Content Include="typings\modules\es6-promise\typings.json" />
+    <Content Include="typings\modules\moment\typings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\app\" />
+    <Folder Include="src\app\charts\" />
+    <Folder Include="src\app\charts\flot-chart-animator\" />
+    <Folder Include="src\app\components\" />
+    <Folder Include="src\app\components\dropzone\" />
+    <Folder Include="src\app\components\flot\" />
+    <Folder Include="src\app\components\holderjs\" />
+    <Folder Include="src\app\components\mapael\" />
+    <Folder Include="src\app\components\morris\" />
+    <Folder Include="src\app\components\nvd3\" />
+    <Folder Include="src\app\components\rickshaw\" />
+    <Folder Include="src\app\components\skycon\" />
+    <Folder Include="src\app\components\sparkline\" />
+    <Folder Include="src\app\components\tile\" />
+    <Folder Include="src\app\components\wizard\" />
+    <Folder Include="src\app\core\" />
+    <Folder Include="src\app\core\chat-sidebar\" />
+    <Folder Include="src\app\core\chat-sidebar\chat-message\" />
+    <Folder Include="src\app\core\navbar\" />
+    <Folder Include="src\app\core\notifications\" />
+    <Folder Include="src\app\core\pipes\" />
+    <Folder Include="src\app\core\sidebar\" />
+    <Folder Include="src\app\core\utils\" />
+    <Folder Include="src\app\core\widget\" />
+    <Folder Include="src\app\dashboard\" />
+    <Folder Include="src\app\dashboard\bootstrap-calendar\" />
+    <Folder Include="src\app\dashboard\geo-locations-widget\" />
+    <Folder Include="src\app\dashboard\marker-stats-widget\" />
+    <Folder Include="src\app\error\" />
+    <Folder Include="src\app\extra-calendar\" />
+    <Folder Include="src\app\extra-gallery\" />
+    <Folder Include="src\app\extra-invoice\" />
+    <Folder Include="src\app\extra-search-results\" />
+    <Folder Include="src\app\extra-time-line\" />
+    <Folder Include="src\app\forms-elements\" />
+    <Folder Include="src\app\forms-validation\" />
+    <Folder Include="src\app\forms-wizard\" />
+    <Folder Include="src\app\forms-wizard\bootstrap-application-wizard\" />
+    <Folder Include="src\app\grid\" />
+    <Folder Include="src\app\grid\grid-demo\" />
+    <Folder Include="src\app\inbox\" />
+    <Folder Include="src\app\inbox\mail-detail\" />
+    <Folder Include="src\app\inbox\mail-form\" />
+    <Folder Include="src\app\inbox\mail-list\" />
+    <Folder Include="src\app\inbox\mail-list\pipes\" />
+    <Folder Include="src\app\login\" />
+    <Folder Include="src\app\maps-google\" />
+    <Folder Include="src\app\maps-vector\" />
+    <Folder Include="src\app\profile\" />
+    <Folder Include="src\app\tables-basic\" />
+    <Folder Include="src\app\tables-dynamic\" />
+    <Folder Include="src\app\tables-dynamic\pipes\" />
+    <Folder Include="src\app\tables-dynamic\tables-backgrid\" />
+    <Folder Include="src\app\ui-buttons\" />
+    <Folder Include="src\app\ui-components\" />
+    <Folder Include="src\app\ui-components\modal-component\" />
+    <Folder Include="src\app\ui-icons\" />
+    <Folder Include="src\app\ui-list-groups\" />
+    <Folder Include="src\app\ui-notifications\" />
+    <Folder Include="src\app\ui-notifications\messenger\" />
+    <Folder Include="src\app\ui-tabs-accordion\" />
+    <Folder Include="src\app\widgets\" />
+    <Folder Include="src\app\widgets\changes-chart-widget\" />
+    <Folder Include="src\app\widgets\flot-chart-widget\" />
+    <Folder Include="src\app\widgets\nasdaq-sparkline-widget\" />
+    <Folder Include="src\app\widgets\realtime-traffic-widget\" />
+    <Folder Include="src\app\widgets\years-map-widget\" />
+    <Folder Include="src\assets\" />
+    <Folder Include="src\assets\bootstrap-application-wizard\" />
+    <Folder Include="src\assets\bootstrap-colorpicker\" />
+    <Folder Include="src\assets\demo\" />
+    <Folder Include="src\assets\demo\grid\" />
+    <Folder Include="src\assets\demo\notifications\" />
+    <Folder Include="src\assets\fonts\" />
+    <Folder Include="src\assets\fonts\font-awesome\" />
+    <Folder Include="src\assets\fonts\glyphicons\" />
+    <Folder Include="src\assets\fonts\google\" />
+    <Folder Include="src\assets\images\" />
+    <Folder Include="src\assets\images\logo\" />
+    <Folder Include="src\assets\images\people\" />
+    <Folder Include="src\assets\images\pictures\" />
+    <Folder Include="src\assets\json\" />
+    <Folder Include="src\assets\select2\" />
+    <Folder Include="src\scss\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\browser\" />
+    <Folder Include="typings\browser\ambient\" />
+    <Folder Include="typings\browser\ambient\es6-shim\" />
+    <Folder Include="typings\browser\ambient\hammerjs\" />
+    <Folder Include="typings\browser\ambient\jquery\" />
+    <Folder Include="typings\browser\ambient\ng2\" />
+    <Folder Include="typings\browser\ambient\node\" />
+    <Folder Include="typings\browser\ambient\selenium-webdriver\" />
+    <Folder Include="typings\browser\ambient\webpack\" />
+    <Folder Include="typings\browser\ambient\zone.js\" />
+    <Folder Include="typings\browser\definitions\" />
+    <Folder Include="typings\browser\definitions\es6-promise\" />
+    <Folder Include="typings\browser\definitions\moment\" />
+    <Folder Include="typings\globals\" />
+    <Folder Include="typings\globals\es6-shim\" />
+    <Folder Include="typings\globals\hammerjs\" />
+    <Folder Include="typings\globals\jquery\" />
+    <Folder Include="typings\globals\ng2\" />
+    <Folder Include="typings\globals\node\" />
+    <Folder Include="typings\globals\selenium-webdriver\" />
+    <Folder Include="typings\globals\webpack\" />
+    <Folder Include="typings\globals\zone.js\" />
+    <Folder Include="typings\main\" />
+    <Folder Include="typings\main\ambient\" />
+    <Folder Include="typings\main\ambient\es6-shim\" />
+    <Folder Include="typings\main\ambient\hammerjs\" />
+    <Folder Include="typings\main\ambient\jquery\" />
+    <Folder Include="typings\main\ambient\ng2\" />
+    <Folder Include="typings\main\ambient\node\" />
+    <Folder Include="typings\main\ambient\selenium-webdriver\" />
+    <Folder Include="typings\main\ambient\webpack\" />
+    <Folder Include="typings\main\ambient\zone.js\" />
+    <Folder Include="typings\main\definitions\" />
+    <Folder Include="typings\main\definitions\es6-promise\" />
+    <Folder Include="typings\main\definitions\moment\" />
+    <Folder Include="typings\modules\" />
+    <Folder Include="typings\modules\es6-promise\" />
+    <Folder Include="typings\modules\moment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app.ts" />
+    <TypeScriptCompile Include="src\app\charts\charts.ts" />
+    <TypeScriptCompile Include="src\app\charts\flot-chart-animator\flot-chart-animator.ts" />
+    <TypeScriptCompile Include="src\app\components\dropzone\dropzone.ts" />
+    <TypeScriptCompile Include="src\app\components\flot\flot.ts" />
+    <TypeScriptCompile Include="src\app\components\holderjs\holderjs.ts" />
+    <TypeScriptCompile Include="src\app\components\mapael\mapael.ts" />
+    <TypeScriptCompile Include="src\app\components\morris\morris.ts" />
+    <TypeScriptCompile Include="src\app\components\nvd3\nvd3.ts" />
+    <TypeScriptCompile Include="src\app\components\rickshaw\rickshaw.ts" />
+    <TypeScriptCompile Include="src\app\components\skycon\skycon.ts" />
+    <TypeScriptCompile Include="src\app\components\sparkline\sparkline.ts" />
+    <TypeScriptCompile Include="src\app\components\tile\tile.ts" />
+    <TypeScriptCompile Include="src\app\components\wizard\wizard.ts" />
+    <TypeScriptCompile Include="src\app\core\chat-sidebar\chat-message\chat-message.ts" />
+    <TypeScriptCompile Include="src\app\core\chat-sidebar\chat-sidebar.ts" />
+    <TypeScriptCompile Include="src\app\core\config.ts" />
+    <TypeScriptCompile Include="src\app\core\core.ts" />
+    <TypeScriptCompile Include="src\app\core\navbar\navbar.ts" />
+    <TypeScriptCompile Include="src\app\core\notifications\notification-load.ts" />
+    <TypeScriptCompile Include="src\app\core\notifications\notifications.ts" />
+    <TypeScriptCompile Include="src\app\core\pipes\pipe.ts" />
+    <TypeScriptCompile Include="src\app\core\sidebar\sidebar.ts" />
+    <TypeScriptCompile Include="src\app\core\utils\animate-number.ts" />
+    <TypeScriptCompile Include="src\app\core\utils\check-all.ts" />
+    <TypeScriptCompile Include="src\app\core\utils\progress-animate.ts" />
+    <TypeScriptCompile Include="src\app\core\widget\widget.ts" />
+    <TypeScriptCompile Include="src\app\dashboard\bootstrap-calendar\bootstrap-calendar.ts" />
+    <TypeScriptCompile Include="src\app\dashboard\dashboard.ts" />
+    <TypeScriptCompile Include="src\app\dashboard\geo-locations-widget\geo-locations-widget.ts" />
+    <TypeScriptCompile Include="src\app\dashboard\marker-stats-widget\marker-stats-widget.ts" />
+    <TypeScriptCompile Include="src\app\error\error.ts" />
+    <TypeScriptCompile Include="src\app\extra-calendar\extra-calendar.ts" />
+    <TypeScriptCompile Include="src\app\extra-gallery\extra-gallery.ts" />
+    <TypeScriptCompile Include="src\app\extra-invoice\extra-invoice.ts" />
+    <TypeScriptCompile Include="src\app\extra-search-results\extra-search-results.ts" />
+    <TypeScriptCompile Include="src\app\extra-time-line\extra-time-line.ts" />
+    <TypeScriptCompile Include="src\app\forms-elements\forms-elements.ts" />
+    <TypeScriptCompile Include="src\app\forms-validation\forms-validation.ts" />
+    <TypeScriptCompile Include="src\app\forms-wizard\bootstrap-application-wizard\bootstrap-application-wizard.ts" />
+    <TypeScriptCompile Include="src\app\forms-wizard\forms-wizard.ts" />
+    <TypeScriptCompile Include="src\app\grid\grid-demo\grid-demo.ts" />
+    <TypeScriptCompile Include="src\app\grid\grid.ts" />
+    <TypeScriptCompile Include="src\app\inbox\inbox.ts" />
+    <TypeScriptCompile Include="src\app\inbox\mail-detail\mail-detail.ts" />
+    <TypeScriptCompile Include="src\app\inbox\mail-form\mail-form.ts" />
+    <TypeScriptCompile Include="src\app\inbox\mail-list\mail-list.ts" />
+    <TypeScriptCompile Include="src\app\inbox\mail-list\pipes\folders-pipe.ts" />
+    <TypeScriptCompile Include="src\app\inbox\mail-list\pipes\search-pipe.ts" />
+    <TypeScriptCompile Include="src\app\login\login.ts" />
+    <TypeScriptCompile Include="src\app\maps-google\maps-google.ts" />
+    <TypeScriptCompile Include="src\app\maps-vector\maps-vector.ts" />
+    <TypeScriptCompile Include="src\app\profile\profile.ts" />
+    <TypeScriptCompile Include="src\app\tables-basic\tables-basic.ts" />
+    <TypeScriptCompile Include="src\app\tables-dynamic\pipes\search-pipe.ts" />
+    <TypeScriptCompile Include="src\app\tables-dynamic\tables-backgrid\tables-backgrid.ts" />
+    <TypeScriptCompile Include="src\app\tables-dynamic\tables-dynamic.ts" />
+    <TypeScriptCompile Include="src\app\ui-buttons\ui-buttons.ts" />
+    <TypeScriptCompile Include="src\app\ui-components\modal-component\modal-component.ts" />
+    <TypeScriptCompile Include="src\app\ui-components\ui-components.ts" />
+    <TypeScriptCompile Include="src\app\ui-icons\ui-icons.ts" />
+    <TypeScriptCompile Include="src\app\ui-list-groups\ui-list-groups.ts" />
+    <TypeScriptCompile Include="src\app\ui-notifications\messenger\messenger.ts" />
+    <TypeScriptCompile Include="src\app\ui-notifications\ui-notifications.ts" />
+    <TypeScriptCompile Include="src\app\ui-tabs-accordion\ui-tabs-accordion.ts" />
+    <TypeScriptCompile Include="src\app\widgets\changes-chart-widget\changes-chart-widget.ts" />
+    <TypeScriptCompile Include="src\app\widgets\flot-chart-widget\flot-chart-widget.ts" />
+    <TypeScriptCompile Include="src\app\widgets\nasdaq-sparkline-widget\nasdaq-sparkline-widget.ts" />
+    <TypeScriptCompile Include="src\app\widgets\realtime-traffic-widget\realtime-traffic-widget.ts" />
+    <TypeScriptCompile Include="src\app\widgets\widgets.ts" />
+    <TypeScriptCompile Include="src\app\widgets\years-map-widget\fake-world-data.ts" />
+    <TypeScriptCompile Include="src\app\widgets\years-map-widget\years-map-widget.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+    <TypeScriptCompile Include="typings\browser.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\es6-shim\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\hammerjs\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\jquery\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\ng2\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\selenium-webdriver\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\webpack\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\ambient\zone.js\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\definitions\es6-promise\index.d.ts" />
+    <TypeScriptCompile Include="typings\browser\definitions\moment\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\es6-shim\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\hammerjs\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\jquery\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\ng2\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\selenium-webdriver\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\webpack\index.d.ts" />
+    <TypeScriptCompile Include="typings\globals\zone.js\index.d.ts" />
+    <TypeScriptCompile Include="typings\index.d.ts" />
+    <TypeScriptCompile Include="typings\main.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\es6-shim\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\hammerjs\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\jquery\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\ng2\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\node\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\selenium-webdriver\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\webpack\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\ambient\zone.js\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\definitions\es6-promise\index.d.ts" />
+    <TypeScriptCompile Include="typings\main\definitions\moment\index.d.ts" />
+    <TypeScriptCompile Include="typings\modules\es6-promise\index.d.ts" />
+    <TypeScriptCompile Include="typings\modules\moment\index.d.ts" />
+  </ItemGroup>
+  <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
